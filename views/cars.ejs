@@ -1,0 +1,172 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <% if(cars.length==0){ %>
+    <h3>No Cars Avaliable</h3>
+    <% }else{ %> <% cars.forEach((car)=>{ %>
+    <h1><%=car.carName%></h1>
+    <p>Price for One Hour - <%=car.priceOne %> per hour</p>
+    <p>Price for Five Hours - <%=car.priceFive %> per hour</p>
+    <p>Price for over Five Hours - <%=car.priceSix %> per hour</p>
+    <p><img src="<%=car.image1%>" alt="" width="500px" /></p>
+    <p><img src="<%=car.image2%>" alt="" width="500px" /></p>
+    <p><img src="<%=car.image3%>" alt="" width="500px" /></p>
+    <p><a href="<%=car.carDetails%>">Additional Information</a></p>
+    <p><a href="/userBooking/<%=car.carId%>">Book Now</a></p>
+
+    <% }) %> <% } %>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Your Car</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/cars.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <style>
+    input,
+    button,
+    a {
+      outline: none;
+      text-decoration: none;
+    }
+  </style>
+  <body style="background-color: #ffeac4">
+    <div class="top">Step-3</div>
+    <div class="title">Select the nearest branch for pickup</div>
+
+    <% if(cars.length==0){ %>
+    <h3>No Cars Avaliable</h3>
+    <% }else{ %> <% cars.forEach((car,index)=>{ %>
+    <div class="container" id="cars">
+      <div class="rows">
+        <div class="col-md-5 col-sm-12 imgs" style="height: 100%">
+          <!-- Carousel -->
+          <div
+            id="<%=car.carName%>"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <ol class="carousel-indicators">
+              <li
+                data-target="#<%=car.carName%>"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li
+                data-target="#<%=car.carName%>"
+                data-slide-to="1"
+                class=""
+              ></li>
+              <li
+                data-target="#<%=car.carName%>"
+                data-slide-to="2"
+                class=""
+              ></li>
+            </ol>
+            <div
+              class="carousel-inner"
+              role="listbox"
+              style="width: 100%; height: 600px !important"
+            >
+              <div class="item active">
+                <div class="container">
+                  <img src="<%=car.image1%>" alt="image-1" />
+                </div>
+              </div>
+              <div class="item">
+                <div class="container">
+                  <img src="<%=car.image2%>" alt="image-2" />
+                </div>
+              </div>
+              <div class="item">
+                <div class="container">
+                  <img src="<%=car.image3%>" alt="image-3" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-7 col-sm-12 information">
+          <div class="rows carn-name"><%=car.carName%></div>
+          <div
+            style="
+              background-color: #ffeac4;
+              padding: 10px;
+              border-radius: 25px;
+            "
+          >
+            <div class="rows price">
+              Prices
+              <!-- - <%=car.priceOne %> per hour -->
+            </div>
+            <div class="rows">
+              <div
+                class="col-md-4 col-sm-4 total-info"
+                style="text-align: center"
+              >
+                <div class="time">1hr</div>
+                <div class="prices">Rs. <%=car.priceOne %> /hr</div>
+              </div>
+              <div
+                class="col-md-4 col-sm-4 total-info"
+                style="text-align: center"
+              >
+                <div class="time">2hr</div>
+                <div class="prices">Rs. <%=car.priceFive %> /hr</div>
+              </div>
+              <div class="col-md-4 col-sm-4" style="text-align: center">
+                <div class="time">5hr</div>
+                <div class="prices">Rs. <%=car.priceSix %> /hr</div>
+              </div>
+
+              <!-- Price for Five Hours - <%=car.priceFive %> per hour  -->
+            </div>
+          </div>
+          <!-- <div>Price for over Five Hours - <%=car.priceSix %> per hour</div> -->
+
+          <!-- <p><img src="<%=car.image1%>" alt="" width="500px" /></p>
+        <p><img src="<%=car.image2%>" alt="" width="500px" /></p>
+        <p><img src="<%=car.image3%>" alt="" width="500px" /></p> -->
+          <div class="rows links">
+            <div class="col-md-6 col-sm-6 info-link">
+              <a style="color: white" href="<%=car.carDetails%>"
+                >Additional Information</a
+              >
+            </div>
+            <div class="col-md-6 col-sm-6 book" style="align-items: right">
+              <a href="/userBooking/<%=car.carId%>">
+                <button class="car-book">Book Now</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% }) %> <% } %>
+    <script>
+      $(".carousel").carousel({
+        interval: 2000,
+      });
+    </script>
+  </body>
+</html>

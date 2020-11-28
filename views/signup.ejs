@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login Form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/stylesheets/home.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/stylesheets/signup.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+  input,
+  button,
+  a {
+    outline: none;
+    text-decoration: none;
+  }
+</style>
+<body>
+  <section class="landing">
+    <div class="landing-body">
+      <div class="left-circle">
+        <img src="/Images/left Circle.svg" alt="" width="100% " height="100%">
+      </div>
+      <div class="right-circle">
+        <img src="/Images/Right Circle.svg" alt="">
+      </div>
+      <div class="flex">
+
+
+        <!--<div class="container">
+      <div class="row">
+        
+        <div
+          id="signupbox"
+          
+          class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2"
+        >
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <div class="panel-title">Login</div>
+            </div>
+            <div class="` container">
+              <div class="row">
+                <div class="col-md-6 col-sm-12">
+                  <img src="/Images/signup.svg" alt="" width="150px" height="150px">
+                </div>
+                <div class="col-md-6 col-sm-12">
+
+                
+              <form
+                action="/registering"
+                id="EmployeeForm"
+                class="form-horizontal"
+                method="POST"
+                role="form"
+              >
+                <div
+                  id="signupalert"
+                  style="display: none"
+                  class="alert alert-danger"
+                >
+                  <p>Error:</p>
+                  <span></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="col-md-3 control-label"
+                    >Email ID</label
+                  >
+                  <div class="col-md-9">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      placeholder="Enter Email ID"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="password" class="col-md-3 control-label"
+                    >Password</label
+                  >
+                  <div class="col-md-9">
+                    <input
+                      type="password"
+                      class="form-control"
+                      name="password"
+                      placeholder="Enter Password"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="driving" class="col-md-3 control-label"
+                    >Driving Liscene</label
+                  >
+                  <div class="col-md-9">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="driving"
+                      placeholder="Enter Driving Lisence"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="first" class="col-md-3 control-label"
+                    >First Name</label
+                  >
+                  <div class="col-md-9">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="first"
+                      placeholder="Enter First Name"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="last" class="col-md-3 control-label"
+                    >Last Name</label
+                  >
+                  <div class="col-md-9">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="last"
+                      placeholder="Enter Last Name"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="last" class="col-md-3 control-label"
+                    >Date of Birth</label
+                  >
+                  <div class="col-md-9">
+                    <input
+                      type="date"
+                      class="form-control"
+                      name="dob"
+                      placeholder="Enter Date Birth"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone" class="col-md-3 control-label"
+                    >Phone Number</label
+                  >
+                  <div class="col-md-9">
+                    <input
+                      type="number"
+                      class="form-control"
+                      name="phone"
+                      placeholder="Enter Phone Number"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="gender" class="col-md-3 control-label"
+                    >Gender</label
+                  >
+                  <div class="col-md-9">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="gender"
+                      placeholder="Enter gender"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="state" class="col-md-3 control-label"
+                    >State</label
+                  >
+                  <div class="col-md-9">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="state"
+                      placeholder="Enter State"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="city" class="col-md-3 control-label">City</label>
+                  <div class="col-md-9">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="city"
+                      placeholder="Enter City"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="pincode" class="col-md-3 control-label"
+                    >Pincode</label
+                  >
+                  <div class="col-md-9">
+                    <input
+                      type="number"
+                      class="form-control"
+                      name="pincode"
+                      placeholder="Enter Pincode"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  
+                  <div class="col-md-offset-3 col-md-9">
+                    <input
+                      type="submit"
+                      name="submit"
+                      value="submit"
+                      class="btn btn-primary"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+        <div class="container" id="sign-upForm" style="background-color:  #FFEAC4;">
+          <div class="row">
+            <div class="col-md-5 col-sm-12 signup-img" style="padding:  20px;background-color: white;">
+              <img src="/Images/signup.svg" id="" alt="" width="100%" height="100%">
+            </div>
+            <div class="col-md-7 col-sm-12 info">
+              <div class="title ">
+                <span class="signup"> Sign up</span>
+              </div>
+
+              <form action="/registering" id="EmployeeForm" class="" method="POST" role="form">
+                <div class="">
+                  <div class="rows">
+                    <div class="col-md-6 col-sm-6 ">
+                      <div class="row  names">Email</div>
+                      <div class="row "><input type="email" name="email" placeholder="Ex.abc@gmail.com" required></div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 ">
+                      <div class="row names">Password</div>
+                      <div class="row "><input type="password" name="password" id="" required></div>
+                    </div>
+                  </div>
+                  <div class="rows">
+                    <div class="col-md-6 col-sm-6 ">
+                      <div class="row names">First Name </div>
+                      <div class="row"><input type="text" name="first" id="" placeholder="John"> </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <div class="row names"> Last Name</div>
+                      <div class="row"><input type="text" name="last" placeholder="Wick"></div>
+                    </div>
+                  </div>
+                  <div class="rows">
+                    <div class="col-md-6 col-sm-6">
+                      <div class="row names">Driving Licence</div>
+                      <div class="row"><input type="text" name="driving" id=""></div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <div class="row names">Phone No.</div>
+                      <div class="row"><input type="number" name="phone" id=""></div>
+                    </div>
+                  </div>
+                  <div class="rows">
+                    <div class="col-md-6 col-sm-6">
+                      <div class="row names">Date Of Birth</div>
+                      <div class="row"><input type="date" name="dob"></div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <div class="row names">Gender</div>
+                      <div class="row"><input type="text" name="gender" id=""></div>
+                    </div>
+                  </div>
+                  <div class="rows">
+                    <div class="col-md-4 col-sm-4">
+                      <div class="row names">State</div>
+                      <div class="row"><input type="text" name="state"></div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <div class="row names">City</div>
+                      <div class="row"> <input type="text" name="city"></div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                      <div class="row names">Pincode</div>
+                      <div class="row"><input type="number" name="pincode"></div>
+                    </div>
+                  </div>
+                  <div class="rows">
+                    <div class="row">
+                      <input type="submit" name="submit" value="Submit" class="signup-submit">
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Participants Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="/stylesheets/home.css" />
+    <link rel="stylesheet" href="/stylesheets/userBooking.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <style>
+    input,
+    button,
+    a {
+      outline: none;
+      text-decoration: none;
+    }
+  </style>
+  <body>
+    <section class="landing">
+      <div class="landing-body grid" style="z-index: 0;">
+        <div class="left-circle">
+          <img
+            src="/Images/left Circle.svg"
+            alt=""
+            width="100% "
+            height="100%"
+          />
+        </div>
+        <div class="right-circle">
+          <img
+            src="/Images/Right Circle.svg"
+            alt=""
+            width="100% "
+            height="100%"
+          />
+        </div>
+     
+       
+   <div class=" container flex" style="align-items: center;z-index: 1;">
+      <div style="width: 50%; margin-left: 25%;">
+
+      
+  
+    <div class="container book-box" style="width: 100%;">
+      <form action="/userBooking" method="POST">
+        <div class="container">
+          <div class="rows">
+            <div class="col-md-6">
+              <label class="labels" for="fromTime">From Time</label>
+              <br>
+              <input class="inputs" type="datetime-local" name="fromTime" />
+            </div>
+            <div class="col-md-6">
+              <label class="labels" for="toTime">To Time</label>
+              <br>
+              <input class="inputs" type="datetime-local" name="toTime" />
+            </div>
+            
+            
+          </div>
+          <div class="rows" style="margin-top: 20px;">
+            <input class="book-submit" type="submit" />
+          </div>
+        </div>
+        
+        
+      </form>
+    </div>
+   
+    
+    <div class="container book-box" style="width: 100%;">
+      <div class="row ">
+        <span class="book-title"> Future Bookings of the Car</span>
+        <table id="membersTable" class="table table-striped " style="background-color: #5a5a5a; " >
+          <thead>
+            <tr style="color:white ;">
+              <th class="labels">From Time</th>
+              <th class="labels">To Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%if (car.length >0){ %> <% car.forEach(function(row){ %>
+            <tr>
+              <%if( row.fromTime > new Date() || row.toTime > new Date() ){%>
+              <td  style="background-color:#FFEAC4 ;"> <%=row.fromTime %></a></td>
+              <td  style="background-color:#FFEAC4 ;"> <%=row.toTime %></a></td>
+              <% } %>
+            </tr>
+            <% })}else{ %>
+            <tr style="background-color:#FFEAC4 ;">
+              <td colspan="6"  style="background-color:#FFEAC4 ;">No Future Bookings</td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    
+  </div>
+</div>
+  </div>
+    </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#membersTable').DataTable();
+      });
+    </script>
+  </body>
+</html>

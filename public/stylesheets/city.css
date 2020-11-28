@@ -1,0 +1,83 @@
+.heading {
+  font-size: xx-large;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+}
+.location-img {
+  position: absolute;
+  top: 30vh;
+  left: 2vw;
+}
+.city {
+  font-size: xx-large;
+  font-weight: 900;
+  text-align: center;
+  color: #5a5a5a;
+}
+.city-para {
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 20px;
+  color: #5a5a5a;
+  text-align: center;
+}
+.name {
+  color: #5a5a5a;
+}
+input[type="text"] {
+  width: 50%;
+  margin-left: 25%;
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+.form-btn {
+  width: 25%;
+  margin-left: 37.5%;
+}
+input[type="submit"] {
+  width: 80%;
+  margin-left: 10%;
+  padding: 10px;
+  color: white;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 2px solid white;
+}
+input[type="submit"]:hover {
+  background-color: #5a5a5a;
+  border: 2px solid #5a5a5a;
+}
+.row {
+  margin-top: 40px;
+}
+.top {
+  text-align: center;
+  font-size: xx-large;
+  color: white;
+  font-weight: 900;
+  margin-top: 20px;
+}
+
+.city-dropdown {
+  width: 250px;
+  margin: 0 auto;
+  border-radius: 20px;
+  outline: none;
+}
+
+@media (max-width: 767px) {
+  input[type="text"] {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .form-btn {
+    width: 50%;
+    margin-left: 25%;
+  }
+  .location-img {
+    display: none;
+  }
+}

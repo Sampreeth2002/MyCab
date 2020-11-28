@@ -1,0 +1,34 @@
+.book-title {
+  font-size: xx-large;
+  color: white;
+  font-weight: 900;
+}
+.book-box {
+  margin-bottom: 40px;
+}
+tbody {
+  background-color: #ffeac4;
+  border-top: none;
+}
+.inputs {
+  border-radius: 15px;
+  border: none;
+  padding: 15px 10px;
+  font-size: 15px;
+  outline: none;
+}
+.book-submit {
+  width: 30%;
+  margin-left: 35%;
+  background-color: #5a5a5a;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  padding: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.labels {
+  font-size: 20px;
+}

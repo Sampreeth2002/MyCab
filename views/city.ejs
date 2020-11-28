@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/home.css" />
+    <link rel="stylesheet" href="/stylesheets/city.css" />
+  </head>
+  <style>
+    input,
+    button,
+    a {
+      outline: none;
+      text-decoration: none;
+    }
+  </style>
+  <body>
+    <section class="landing">
+      <div class="landing-body">
+        <div class="left-circle">
+          <img
+            src="/Images/left Circle.svg"
+            alt=""
+            width="100% "
+            height="100%"
+          />
+        </div>
+        <div class="right-circle">
+          <img
+            src="/Images/Right Circle.svg"
+            alt=""
+            width="100% "
+            height="100%"
+          />
+        </div>
+        <div class="location-img">
+          <img src="/Images/location.svg" alt="" width="50%" height="50%" />
+        </div>
+        <div class="top">Step-1</div>
+        <div class="flex">
+          <div class="container" style="z-index: 1">
+            <div class="city">Enter Your City</div>
+            <div class="header">
+              <!-- Welcome back ,
+             <br>
+            <span class="name"><%=first %> <%= last%> </span> -->
+              <p class="city-para">
+                Out of the different places you would like to travel , please
+                enter your next destination with us.
+              </p>
+            </div>
+
+            <form action="/booking" method="POST">
+              <div class="container">
+                <div class="form-group">
+                  <select
+                    name="city"
+                    placeholder="Select a City"
+                    class="form-control city-dropdown"
+                    id="myInput"
+                  >
+                    <%response.forEach((city)=>{ %>
+                    <option><%=city.cityName%></option>
+                    <%})%>
+                  </select>
+                </div>
+                <div class="row form-btn">
+                  <input type="submit" style="outline: none" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

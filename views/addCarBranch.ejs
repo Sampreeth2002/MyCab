@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Participants Details</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <style>
+    input {
+      border: none;
+      border-radius: 50px;
+      padding: 5px;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+    a,
+    button,
+    input {
+      outline: none;
+      text-decoration: none;
+    }
+  </style>
+  <body style="background-color: #ffb240; font-family: Poppins">
+    <div
+      class="container"
+      class="container"
+      style="
+        background-color: #ffeac4;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      "
+    >
+      <h1 style="text-align: center; color: #5a5a5a; font-weight: 900">
+        Add Car
+      </h1>
+
+      <form action="/addCarBranch" method="POST">
+        <input type="number" name="carId" placeholder="Enter New Car ID" />
+        <input type="number" name="branchId" placeholder="Enter Branch Id" />
+        <input type="text" name="carName" placeholder="Enter Car Name" />
+        <input type="number" name="priceOne" placeholder="Enter Price (1 hr)" />
+        <input
+          type="number"
+          name="priceFive"
+          placeholder="Enter Price (5 hrs)"
+        />
+        <input
+          type="number"
+          name="priceSix"
+          placeholder="Enter Price (above 5 hrs)"
+        />
+        <input
+          type="submit"
+          style="background-color: #5a5a5a; color: white; outline: none"
+        />
+      </form>
+      <div class="rows">
+        <h1 style="text-align: center; color: #5a5a5a; font-weight: 900">
+          Car with Branches
+        </h1>
+        <table id="membersTable" class="table table-striped table-primary">
+          <thead>
+            <tr style="color: #5a5a5a">
+              <th>Car Id</th>
+              <th>CarName</th>
+              <th>Branch Id</th>
+              <th>Branch Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%if (response.length >0){ %> <% response.forEach(function(row){ %>
+            <tr>
+              <td><%=row.carId %></td>
+              <td><%=row.carName %></td>
+              <td><%=row.branchId %></td>
+              <td><%=row.branchName %></td>
+            </tr>
+            <% })}else{ %>
+            <tr>
+              <td colspan="6">No Record Found</td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#membersTable").DataTable();
+      });
+    </script>
+  </body>
+</html>

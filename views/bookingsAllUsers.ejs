@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Participants Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        input {
+            border: none;
+            border-radius: 50px;
+            padding: 5px;
+            margin-left: 10px;
+        }
+
+        input,
+        button,
+        a {
+            outline: none;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body style="background-color: #ffb240; font-family: Poppins">
+    <div class="container" style="
+        background-color: #ffeac4;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      ">
+
+        <div class="rows">
+            <h1 style="text-align: center; font-weight: 800; color: #5a5a5a">
+                Bookings of All Users
+            </h1>
+            <table id="membersTable" class="table table-striped table-primary">
+                <thead>
+                    <tr>
+                        <th style="color: #5a5a5a">Booking ID</th>
+                        <th style="color: #5a5a5a">User ID</th>
+                        <th style="color: #5a5a5a">User Name</th>
+                        <th style="color: #5a5a5a">Car Name</th>
+                        <th style="color: #5a5a5a">From Time</th>
+                        <th style="color: #5a5a5a">To Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%if (response.length >0){ %> <% response.forEach(function(row){ %>
+                    <tr>
+                        <td><%=row.bookingId %></td>
+                        <td><%=row.userId %></td>
+                        <td><%=row.first %> - <%=row.second %></td>
+                        <td><%=row.carName %></td>
+                        <td><%=row.fromTime %></td>
+                        <td><%=row.toTime %></td>
+                    </tr>
+                    <% })}else{ %>
+                    <tr>
+                        <td colspan="6">No Record Found</td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#membersTable").DataTable();
+        });
+    </script>
+</body>
+
+</html>

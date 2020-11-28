@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="home">
+  <head>
+    <title>Admin Login</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/login.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+  <style>
+    input,
+    button {
+      outline: none;
+      text-decoration: none;
+    }
+  </style>
+
+  <body class="home">
+    <section class="landing">
+      <div class="landing-body grid">
+        <div class="left-circle">
+          <img
+            src="/Images/left Circle.svg"
+            alt=""
+            width="100% "
+            height="100%"
+          />
+        </div>
+        <div class="right-circle">
+          <img
+            src="/Images/Right Circle.svg"
+            alt=""
+            width="100% "
+            height="100%"
+          />
+        </div>
+        <div class="flex">
+          <div class="container">
+            <div class="row">
+              <div
+                id="signupbox"
+                class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2"
+              >
+                <div class="panel panel-info">
+                  <div class="panel-heading">
+                    <div class="panel-title">Admin Login</div>
+                    <p><% if(success !=''){ %> <%= success %> <% } %></p>
+                  </div>
+                  <div class="panel-body">
+                    <form
+                      action="/adminlogin"
+                      id="EmployeeForm"
+                      class="form-horizontal"
+                      method="POST"
+                      role="form"
+                    >
+                      <div
+                        id="signupalert"
+                        style="display: none"
+                        class="alert alert-danger"
+                      >
+                        <p>Error:</p>
+                        <span></span>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="email" class="col-md-12 control-label"
+                          >Email ID</label
+                        >
+                        <div class="col-md-12">
+                          <input
+                            type="email"
+                            class="form-control"
+                            name="email"
+                            placeholder="Ex.abc@gmail.com"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="password" class="col-md-12 control-label"
+                          >Password</label
+                        >
+                        <div class="col-md-12">
+                          <input
+                            type="password"
+                            class="form-control"
+                            name="password"
+                            placeholder=""
+                          />
+                        </div>
+                      </div>
+
+                      <div class="form-group" style="margin-top: 40px">
+                        <div class="col-md-offset-3 col-md-9 log-btn">
+                          <input
+                            type="submit"
+                            name="submit"
+                            value="Submit"
+                            class="btn btn-primary"
+                            style="outline: none"
+                          />
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="home">
+  <head>
+    <title>Admin Login</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/login.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+      button {
+        background-color: #5a5a5a;
+        border-radius: 50px;
+        padding: 10px;
+        border: none;
+        color: white;
+        outline: none;
+      }
+      button:hover {
+        background-color: white;
+        color: #ffb240;
+      }
+      input,
+      a {
+        text-decoration: none;
+        outline: none;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: #ffb240">
+    <div class="container flex">
+      <div class="row" style="width: 80%; margin-left: 10%; text-align: center">
+        <div
+          style="
+            font-size: 50px;
+            color: white;
+            font-weight: 900;
+            margin-bottom: 30px;
+          "
+        >
+          Welcome
+        </div>
+        <div class="row " style="margin-bottom: 30px;" >
+          <div class="col-md-6 col-sm-12" >
+            <!-- <p>Add Car to Collection</p> -->
+            <a href="/bookingAllUsers"> <button>Bookings of Users</button> </a>
+          </div>
+          <div class="col-md-6 col-sm-12" >
+            <!-- <p>Add Car to Collection</p> -->
+            <a href="/paymentsAllUsers"> <button>Payments of Users</button> </a>
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-sm-12">
+            <!-- <p>Add Car to Collection</p> -->
+            <a href="/addCar"> <button>Add Car to Collection</button> </a>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <!-- <p>Add Car to Branch</p> -->
+            <a href="/addCarBranch"><button>Add Car to Branch</button> </a>
+          </div>
+          <div class="col-md-2 col-sm-12">
+            <!-- <p>Add Branch</p> -->
+            <a href="/addBranch"><button>Add Branch</button> </a>
+          </div>
+          <div class="col-md-2 col-sm-12">
+            <!-- <p>Delete Branches</p> -->
+            <a href="/deleteBranch"><button>Delete Branch</button></a>
+          </div>
+          <div class="col-md-2 col-sm-12">
+            <!-- <p>Delete Cars in branches</p> -->
+            <a href="/deletecar"><button>Delete car</button> </a>
+          </div>
+        </div>
+        <div style="margin-top: 40px">
+          <a href="/" style="color: white; font-size: larger">Go Home</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

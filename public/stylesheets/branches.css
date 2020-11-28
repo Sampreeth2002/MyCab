@@ -1,0 +1,51 @@
+.top {
+  background-color: #ffb240;
+  font-size: xx-large;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+}
+.title {
+  font-size: xx-large;
+  color: #5a5a5a;
+  text-align: center;
+  font-weight: 800;
+  margin-top: 40px;
+}
+#branch {
+  background-color: #ffb240;
+  border-radius: 15px;
+  margin-top: 30px;
+  width: 70%;
+  margin-left: 15%;
+}
+.imgs {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.informations {
+  padding: 10px;
+}
+.rows {
+  font-size: x-large;
+  font-weight: 700;
+  color: white;
+}
+.branch-cars {
+  background-color: white;
+  color: #ffb240;
+  border-radius: 50px;
+  border: none;
+  padding: 10px;
+  font-size: medium;
+  font-weight: 400;
+  outline: none;
+}
+@media (max-width: 767px) {
+  .branch-cars {
+    width: 60%;
+    margin-left: 20%;
+  }
+}

@@ -1,0 +1,95 @@
+.top {
+  background-color: #ffb240;
+  font-size: xx-large;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+}
+.title {
+  font-size: xx-large;
+  color: #5a5a5a;
+  text-align: center;
+  font-weight: 800;
+  margin-top: 40px;
+}
+#cars {
+  background-color: #ffb240;
+  border-radius: 5px;
+  margin-top: 30px;
+  width: 70%;
+  margin-left: 15%;
+}
+.imgs {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.information {
+  padding-top: 10px;
+}
+.car-book {
+  background-color: white;
+  color: #ffb240;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  float: right;
+  margin-bottom: 20px;
+  outline: none;
+}
+.links {
+  margin-top: 20px;
+}
+.carn-name {
+  font-size: x-large;
+  font-weight: 700;
+  color: white;
+}
+.price {
+  font-size: large;
+  font-weight: 600;
+  color: #5a5a5a;
+  text-align: center;
+}
+.time {
+  font-weight: 600;
+  color: #ffb240;
+  font-size: larger;
+}
+.prices {
+  color: #5a5a5a;
+}
+.total-info {
+  border-right: 2px solid #5a5a5a;
+}
+.info-link {
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.carousel-inner {
+  width: 100%;
+  max-height: 200px !important;
+}
+
+.carousel-inner img {
+  width: 40%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .total-info {
+    border-right: none;
+  }
+  .price {
+    text-align: center;
+  }
+  .car-book {
+    width: 50%;
+    margin-left: 25%;
+    float: none;
+  }
+}

@@ -1,0 +1,16 @@
+.message {
+  width: 50%;
+  margin-left: 25%;
+  font-size: xx-large;
+  color: #5a5a5a;
+  font-weight: 900;
+}
+.success-line {
+  margin-bottom: 40px;
+}
+.success-link {
+  font-size: medium;
+  color: #5a5a5a;
+  font-weight: 400;
+  outline: none;
+}
